@@ -24,6 +24,14 @@ console.log(addToCollection('Jazz Legends', 'Kind of Blue', 'Miles Davis', 1959)
 
 console.log(myCollection);
 
+function showCollection (collection){
+  for (const collect of collection) {
+    console.log(`${collect.title} by ${collect.artist}, published in ${collect.yearPublished}`);
+    
+  }
+}
+showCollection(myCollection);
+
 
 
 
