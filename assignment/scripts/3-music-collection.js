@@ -5,24 +5,26 @@ let myCollection = [];
 
 function addToCollection(collection, title, artist, yearPublished) {
   // your code here...
-  let music = {
+  let album = {
     collection: collection,
     title: title,
     artist:artist,
     yearPublished: yearPublished
   }
-  myCollection.push(music);
-  return music;
+  myCollection.push(album);
+  return album;
 }
 ;
-console.log(addToCollection('Classic Rock','The Dark Side of the Moon', 'Pink Floyd', 1973));
-console.log(addToCollection('Hip-Hop Essentials', 'Illmatic', 'Nas', 1994));
-console.log(addToCollection('Soul Classics', "What's Going On", 'Marvin Gaye', 1971));
-console.log(addToCollection('Alternative/Indie', 'Nevermind', 'Nirvana', 1991));
-console.log(addToCollection('R&B Legends', 'Lemonade', 'Beyoncé', 2016));
-console.log(addToCollection('Jazz Legends', 'Kind of Blue', 'Miles Davis', 1959));
+  console.log(addToCollection('Classic Rock','The Dark Side of the Moon', 'Pink Floyd', 1973));
+  console.log(addToCollection('Hip-Hop Essentials', 'Illmatic', 'Nas', 1994));
+  console.log(addToCollection('Soul Classics', "What's Going On", 'Marvin Gaye', 1971));
+  console.log(addToCollection('Alternative/Indie', 'Nevermind', 'Nirvana', 1991));
+  console.log(addToCollection('R&B Legends', 'Lemonade', 'Beyoncé', 2016));
+  console.log(addToCollection('Jazz Legends', 'Kind of Blue', 'Miles Davis', 1959));
 
-console.log(myCollection);
+   console.log(myCollection);
+
+
 
 function showCollection (collection){
   for (const collect of collection) {
@@ -30,11 +32,24 @@ function showCollection (collection){
     
   }
 }
-showCollection(myCollection);
+  showCollection(myCollection);
 
 
 
 
+  // First loop: Count occurrences of each artist
+
+  function findByArtist (collection, artist) {
+    let matchingArtist = [];
+    for (let music of collection){
+      if (music.artist===artist){
+      matchingArtist.push(music);
+      }
+     }
+    return matchingArtist
+    }
+    console.log(findByArtist(myCollection, 'Pink Floyd'));
+    
 
 
 // PLEASE DO NOT MODIFY THIS. Just leave it down here at the bottom. Think of it
